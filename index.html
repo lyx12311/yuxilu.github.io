@@ -11,126 +11,311 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			/* Homepage-specific layout */
+
+			/*
+			 * HTML5 UP Massively sets overflow: hidden on #wrapper.
+			 * That makes #wrapper a scrolling ancestor and prevents
+			 * position: sticky from sticking to the browser viewport.
+			 * overflow: clip preserves the template's clipping without
+			 * creating a scrolling container.
+			 */
+			#wrapper {
+				overflow: visible !important;
+			}
+
+			@supports (overflow: clip) {
+				#wrapper {
+					overflow: clip !important;
+				}
+			}
+
+			#main > .post.homepage {
+				padding-top: 4rem;
+			}
+
+			.profile-layout {
+				display: grid;
+				grid-template-columns: 250px minmax(0, 1fr);
+				gap: 3.5rem;
+				align-items: start;
+				text-align: left;
+			}
+
+			.profile-sidebar {
+				position: -webkit-sticky;
+				position: sticky;
+				top: 2rem;
+				align-self: start;
+				height: fit-content;
+			}
+
+			.profile-photo {
+				display: block;
+				width: 100%;
+				height: auto;
+				margin: 0 0 1.5rem 0;
+				border-radius: 0.25rem;
+			}
+
+			.profile-sidebar h2 {
+				margin-bottom: 0.4rem;
+				font-size: 1.45rem;
+				line-height: 1.25;
+			}
+
+			.profile-title {
+				margin-bottom: 1.4rem;
+				font-size: 0.92rem;
+				line-height: 1.55;
+				color: #666;
+			}
+
+			.profile-links {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			.profile-links li {
+				margin: 0 0 0.55rem 0;
+				padding: 0;
+				border: 0;
+			}
+
+			.profile-links a {
+				border-bottom: dotted 1px;
+			}
+
+			.profile-content {
+				min-width: 0;
+			}
+
+			.profile-content > section {
+				margin: 0 0 3.5rem 0;
+			}
+
+			.profile-content h2,
+			.profile-content h3,
+			.profile-content h4 {
+				text-align: left;
+			}
+
+			.profile-content h2 {
+				margin-bottom: 1.25rem;
+			}
+
+			.profile-content h3 {
+				margin-bottom: 1rem;
+			}
+
+			.profile-content p {
+				margin-bottom: 1.15rem;
+			}
+
+			.profile-content ul {
+				margin-top: 0.75rem;
+			}
+
+			.profile-content li {
+				margin-bottom: 0.9rem;
+			}
+
+			.research-lead {
+				font-size: 1.08rem;
+				line-height: 1.75;
+			}
+
+			figure {
+				margin: 2rem 0 0 0;
+			}
+
+			figure img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+
+			figcaption {
+				margin-top: 0.8rem;
+				font-size: 0.82rem;
+				line-height: 1.55;
+				color: #666;
+			}
+
+			@media screen and (max-width: 736px) {
+				#main > .post.homepage {
+					padding-top: 2.5rem;
+				}
+
+				.profile-layout {
+					grid-template-columns: 1fr;
+					gap: 2.5rem;
+				}
+
+				.profile-sidebar {
+					position: static;
+					max-width: 320px;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+		<div id="wrapper" class="fade-in">
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Yuxi (Lucy) Lu</h1>
-						<p> Astronomy Postdoc at the Ohio State University </p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
-
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Home</a>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html"> Academia </a></li>
-							<li><a href="Personal.html"> Personal Life </a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://twitter.com/LucyYuxi" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.instagram.com/lucy_llllll/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://github.com/lyx12311" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2> About me </h2>
-								
-									<a href="https://github.com/lyx12311/CV/raw/master/YuxiLuCV.pdf" download class="button medium"> 
-									Download my CV 
-									</a> 
-									<a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-4769-3273&sort=date+desc" download class="button medium"> 
-                                                                        ADS
-                                                                        </a>
-									<a href="https://scholar.google.com/citations?user=-360Ga8AAAAJ&hl=en&oi=ao" download class="button medium"> 
-                                                                        Google Scholar
-                                                                        </a>
-									<br /> <br />
-									<img src="images/homeimage.jpg" alt="" style="width:40%;height:40%" class="center"/> <br />
-									
-									
-									I'm a Buckeye Prize Fellow and Ohio State President's Postdoctoral Scholar at the Ohio State University. I obtained an Astronomy Ph.D. from Columbia University in 2023. My dissertation, "Rewinding the Milky Way in Time," explored the history and evolution of our Galaxy through large stellar surveys, with a focus on developing ways to reduce high-dimensional data into physically meaningful and interpretable dimensions. I am interested in <b>stellar physics, Galactic archaeology, and the statistical analysis of exoplanet systems</b>. I specialize in deriving stellar ages from large stellar surveys (e.g., Kepler, TESS, APOGEE, and LAMOST), with a particular focus on gyrochronology calibration. I am also interested in Galactic archaeology, especially radial migration and inferring stellar birth radii. In addition, I am interested in using large surveys to identify unusual or "weird" stars and using these outliers as laboratories for uncovering missing physics in stellar and Galactic evolution.</b>
-								
-									<br /><br /><br />
-									
-									
-
-									<h3>Exceptional Stars Exceptional Physics:</h3> 
-									As mentioned above, I am interested in using large surveys to identify unusual or "weird" stars and using these outliers as laboratories for uncovering missing physics in stellar and Galactic evolution. <br />
-									Some interesting puzzles are highlighted below. If you have any thoughts or ideas, please reach out and we can solve these mysteries together!<br />
-									<ul>
-										<li>  <a href="https://ui.adsabs.harvard.edu/abs/2025AJ....169..168L/abstract"><b>Young high-α DWARF stars</b></a>: Unlike giants, lithium provides a powerful way to rule out past mass-transfer and merger scenarios in dwarf stars. Yet we have found rapidly rotating, high-α dwarf stars that appear to be genuinely young despite their chemically old compositions. Their existence challenges our understanding of Galactic chemical evolution. How did these stars form? </li>
-										<li>  <a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260806204L/abstract"><b>Missing metal-rich giants</b></a>: Where are all the extremely metal-rich giants? We find almost no red giant branch stars beyond [M/H] > 0.4 dex, yet standard stellar models do not predict such a cutoff. Is this real? Roman will tell us! </li>
-										<li>  <b>Slow-rotating fully convective stars in the Praesepe and Hyades</b>: Coming soon...
-									</ul>
-								
-									
-								    <h3>Stellar ages:</h3> 
-									My work focuses on deriving stellar ages using gyrochronology and spectroscopy. In particular, I have devoted much of my research to calibrating gyrochronology relations for old, low-mass stars using their kinematics. <br /><br />
-									
-									<h4>Stellar age catalogs I created that are publicly accessible:</h4> 
-									<ul>
-										<li> Gyrochronology relation (GPgyro; available <a href="https://github.com/lyx12311/GPgyro">here</a>) to obtain dwarf star ages from 0.67 - 14 Gyr (most accurate >1.5 Gyr) for partially and fully convective stars (~100,000 dwarf stars; available <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....167..159L/abstract">here</a>) </li>
-										<li> Gyro-Kinematic ages (29,949 Kepler ages; available <a href="https://ui.adsabs.harvard.edu/abs/2021AJ....161..189L/abstract">here</a>): We combined kinematic properties (vertical velocity), temperature, magnitude from Gaia, and rotation periods from Kepler to estimate gyro-kinematic ages.</li>
-										<li> Spectroscopic ages and red clump membership (64,317 APOGEE ages: available <a href="https://ui.adsabs.harvard.edu/abs/2021arXiv210212003Y/abstract">here</a>): 
-											We used <a href="https://arxiv.org/abs/1501.07604">The Cannon</a>) to obtain stellar ages and red clump membership from APOGEE spectra. These stellar ages are then used to study the properties of the high- and low-α disks.</li>
-										
-									</ul>
-									<figure>
-										<img src="images/All_age_err_20.png" alt="" style="width:100%;height:100%" class="center"/> <br />
-										<figcaption>Figures suggesting by combining all age-dating methods, it is possible to determine ages for single field stars of almost all evolutionary stages within 20% uncertainty combining spectroscopy and photometric time-series data. The methods shown in each panel are described in the corresponding legends and combine spectroscopic and photometric time-series data. The faded 2D histograms show the locations of stars with ages determined using each method in the color–magnitude diagram (CMD), while the colored contours show the kernel density estimates (KDEs) of stars with age uncertainties below 20%. The side histograms show the corresponding KDEs along each CMD axis for these stars.</figcaption>
-									</figure>
-							
-
-									</br></br>
-									
-									<h3>Galactic Archaeology:</h3> 
-									My work in galactic archaeology has been on analyzing simulations or comparing simulations to Milky Way data to understand the formation history of our own Galaxy. I mainly focus on the importance of radial migration and obtaining <a href="https://ui.adsabs.harvard.edu/abs/2024MNRAS.535..392L/abstract">birth radii</a> for stars (see the figure below explaining the formation of the Milky Way).<br /><br />
-									<figure>
-									<img src="images/birthradii.png" alt="" style="width:100%;height:100%" class="center"/> <br />
-									<figcaption>Assembly of the Milky Way age-metallicity relation (AMR).
-    a: Stellar density distribution of the full data set, shown as a 2D histogram in bins of &Delta;[Fe/H]=0.05 dex and &Delta;&tau;=0.37 Gyr. Darker colors correspond to higher density. The sample is further split into stars with guiding radius, R<sub>g</sub>, currently located in the solar vicinity (b), the inner disk (c), and the outer disk (d). The curves overlaid on top of panels b, c, d show the AMR of different birth radii using a bin of &Delta;R<sub>bir</sub>=0.5 kpc.
-    It now becomes clear that the ridge of old stars originated in the inner 5 kpc, while the younger ridge is composed of stars mostly born outside 6~kpc. Because of radial migration and asymmetric drift, both of these are present in the solar vicinity.
-    Given the Sun's age and metallicity, we estimate that it was born at R=4.5&plusmn; 0.4 kpc.</figcaption>
-									</figure>
-									
-									
-						
-						
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-
+			<!-- Intro -->
+			<div id="intro">
+				<h1>Yuxi (Lucy) Lu</h1>
+				<p>Stellar astrophysics &bull; Galactic archaeology &bull; stellar ages</p>
+				<ul class="actions">
+					<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+				</ul>
 			</div>
 
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">Home</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li class="active"><a href="index.html">Academia</a></li>
+					<li><a href="Personal.html">Personal Life</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="https://twitter.com/LucyYuxi" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.instagram.com/lucy_llllll/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://github.com/lyx12311" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<article class="post homepage">
+					<div class="profile-layout">
+
+						<!-- Left sidebar -->
+						<aside class="profile-sidebar">
+							<img src="images/homeimage.jpg" alt="Yuxi (Lucy) Lu" class="profile-photo" />
+							<h2>Yuxi (Lucy) Lu</h2>
+							<p class="profile-title">
+								Buckeye Prize Fellow<br />
+								Ohio State President's Postdoctoral Scholar<br />
+								The Ohio State University
+							</p>
+
+							<ul class="profile-links">
+								<!-- Add your email here when ready, for example:
+								<li><a href="mailto:your-email@osu.edu">Email</a></li>
+								-->
+								<li><a href="https://github.com/lyx12311/CV/raw/master/YuxiLuCV.pdf">Curriculum Vitae</a></li>
+								<li><a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-4769-3273&sort=date+desc">NASA ADS</a></li>
+								<li><a href="https://scholar.google.com/citations?user=-360Ga8AAAAJ&hl=en&oi=ao">Google Scholar</a></li>
+								<li><a href="https://github.com/lyx12311">GitHub</a></li>
+							</ul>
+						</aside>
+
+						<!-- Main profile content -->
+						<div class="profile-content">
+							<section id="about">
+								<h2>About me</h2>
+								<p class="research-lead">
+									I am a Buckeye Prize Fellow and Ohio State President's Postdoctoral Scholar at The Ohio State University. I received my Ph.D. in Astronomy from Columbia University in 2023, where my dissertation, <em>Rewinding the Milky Way in Time</em>, used large stellar surveys to study the history and evolution of our Galaxy.
+								</p>
+								<p>
+									My research connects stellar physics and Galactic archaeology. I develop methods to measure stellar ages from rotation, spectroscopy, and kinematics, and use those ages to study angular-momentum evolution, radial migration, and the formation of the Milky Way.
+								</p>
+								<p>
+									I am especially interested in stars that depart from standard expectations. Large surveys make it possible to identify rare systems that test our models and reveal missing physics in stellar and Galactic evolution. I am also interested in population-level studies of exoplanet systems and the stellar environments in which they evolve.
+								</p>
+							</section>
+
+							<section id="exceptional-stars">
+								<h3>Exceptional stars, exceptional physics</h3>
+								<p>
+									Large surveys define the relationships we expect among stellar age, composition, rotation, and evolution. The most informative objects are often the stars that do not follow those relationships. A few puzzles I am currently exploring are highlighted below.
+								</p>
+								<ul>
+									<li>
+										<a href="https://ui.adsabs.harvard.edu/abs/2025AJ....169..168L/abstract">Young high-&alpha; dwarf stars</a>: Lithium can help rule out past mass-transfer and merger scenarios in dwarf stars, yet we find rapidly rotating, high-&alpha; dwarfs that appear genuinely young despite their chemically old compositions. Their existence challenges a simple connection between chemistry and age and raises the question of how these stars formed.
+									</li>
+									<li>
+										<a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260806204L/abstract">Missing metal-rich giants</a>: We find very few red giant branch stars above [M/H] &gt; 0.4 dex, even though standard stellar models do not predict such a sharp cutoff. Determining whether this deficit is astrophysical or observational will provide a new test of stellar and Galactic evolution.
+									</li>
+									<li>
+										Slow-rotating fully convective stars in Praesepe and the Hyades: coming soon.
+									</li>
+								</ul>
+							</section>
+
+							<section id="stellar-ages">
+								<h3>Stellar ages</h3>
+								<p>
+									Ages are essential for placing stars, planets, and the Milky Way on an evolutionary timeline. My work combines gyrochronology, spectroscopy, and stellar kinematics to improve age estimates across different evolutionary stages, with a particular focus on calibrating gyrochronology for old, low-mass stars.
+								</p>
+
+								<h4>Public stellar-age resources</h4>
+								<ul>
+									<li>
+										<a href="https://github.com/lyx12311/GPgyro">GPgyro</a>: a gyrochronology relation for estimating ages of partially and fully convective dwarf stars from approximately 0.67 to 14 Gyr, calibrated on a sample of roughly 100,000 stars. See the <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....167..159L/abstract">paper</a> for details.
+									</li>
+									<li>
+										<a href="https://ui.adsabs.harvard.edu/abs/2021AJ....161..189L/abstract">Gyro-kinematic ages</a>: ages for 29,949 Kepler stars estimated by combining rotation periods with kinematic and Gaia information.
+									</li>
+									<li>
+										<a href="https://ui.adsabs.harvard.edu/abs/2021arXiv210212003Y/abstract">Spectroscopic ages and red-clump membership</a>: ages for 64,317 APOGEE stars inferred from spectra using <a href="https://arxiv.org/abs/1501.07604">The Cannon</a>, enabling population studies of the high- and low-&alpha; disks.
+									</li>
+								</ul>
+
+								<figure>
+									<img src="images/All_age_err_20.png" alt="Color-magnitude diagram showing the reach of different stellar age-dating methods" />
+									<figcaption>
+										Combining spectroscopic and photometric time-series methods makes it possible to estimate ages for single field stars across much of the color&ndash;magnitude diagram. The colored contours show stars with age uncertainties below 20%, while the faded distributions show the full samples covered by each method.
+									</figcaption>
+								</figure>
+							</section>
+
+							<section id="galactic-archaeology">
+								<h3>Galactic archaeology</h3>
+								<p>
+									I use stellar ages, chemistry, dynamics, and simulations to reconstruct the formation history of the Milky Way. A major focus of this work is radial migration: how stars move away from their birth locations and how that migration reshapes the Galactic disk we observe today.
+								</p>
+								<p>
+									I have developed methods to infer stellar <a href="https://ui.adsabs.harvard.edu/abs/2024MNRAS.535..392L/abstract">birth radii</a>, providing a way to connect present-day stellar populations to the environments in which they formed.
+								</p>
+
+								<figure>
+									<img src="images/birthradii.png" alt="Milky Way age-metallicity relation separated by stellar birth radius" />
+									<figcaption>
+										Assembly of the Milky Way age&ndash;metallicity relation. Separating stars by inferred birth radius reveals that the old ridge is dominated by stars born in the inner Galaxy, while the younger ridge contains stars formed farther out. Radial migration and asymmetric drift bring both populations into the solar vicinity. From the Sun's age and metallicity, we estimate a birth radius of R = 4.5 &plusmn; 0.4 kpc.
+									</figcaption>
+								</figure>
+							</section>
+						</div>
+					</div>
+				</article>
+			</div>
+
+			<!-- Copyright -->
+			<div id="copyright">
+				<ul><li>&copy; Yuxi (Lucy) Lu</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+			</div>
+
+		</div>
+
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
-sample
-
