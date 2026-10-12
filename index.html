@@ -14,24 +14,6 @@
 
 		<style>
 			/* Homepage-specific layout */
-
-			/*
-			 * HTML5 UP Massively sets overflow: hidden on #wrapper.
-			 * That makes #wrapper a scrolling ancestor and prevents
-			 * position: sticky from sticking to the browser viewport.
-			 * overflow: clip preserves the template's clipping without
-			 * creating a scrolling container.
-			 */
-			#wrapper {
-				overflow: visible !important;
-			}
-
-			@supports (overflow: clip) {
-				#wrapper {
-					overflow: clip !important;
-				}
-			}
-
 			#main > .post.homepage {
 				padding-top: 4rem;
 			}
@@ -45,11 +27,9 @@
 			}
 
 			.profile-sidebar {
-				position: -webkit-sticky;
 				position: sticky;
 				top: 2rem;
-				align-self: start;
-				height: fit-content;
+                                align-self: flex-start;
 			}
 
 			.profile-photo {
@@ -213,7 +193,7 @@
 								<!-- Add your email here when ready, for example:
 								<li><a href="mailto:your-email@osu.edu">Email</a></li>
 								-->
-								<li><a href="https://github.com/lyx12311/CV/raw/master/YuxiLuCV.pdf">Curriculum Vitae</a></li>
+								<li><a href="YuxiLuCV.pdf" target="_blank" rel="noopener noreferrer">Curriculum Vitae</a></li>
 								<li><a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-4769-3273&sort=date+desc">NASA ADS</a></li>
 								<li><a href="https://scholar.google.com/citations?user=-360Ga8AAAAJ&hl=en&oi=ao">Google Scholar</a></li>
 								<li><a href="https://github.com/lyx12311">GitHub</a></li>
